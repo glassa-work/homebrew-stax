@@ -1,30 +1,30 @@
-# Hand-authored for the v0.1.0 bootstrap. GoReleaser regenerates this on future
+# Hand-authored for the v2.6.0 bootstrap. GoReleaser regenerates this on future
 # releases of the (private) source repo.
 class Stax < Formula
   desc "Your codebase's knowledge brain — project graph CLI + MCP server"
   homepage "https://stax.glassa.ai"
-  version "0.1.0"
+  version "2.6.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/glassa-work/homebrew-stax/releases/download/v0.1.0/stax-darwin-arm64.tar.gz"
-      sha256 "e1f15add53ce3b24eaadbfb94d2b0ceb916e4b863895a95b47c0ccc8d3dfcdfc"
+      url "https://github.com/glassa-work/homebrew-stax/releases/download/v2.6.0/stax-darwin-arm64.tar.gz"
+      sha256 "1926d9ac7cc59094f0353fa006e513c903079ea2419e89ce7853ed72a148b149"
     end
     on_intel do
-      url "https://github.com/glassa-work/homebrew-stax/releases/download/v0.1.0/stax-darwin-amd64.tar.gz"
-      sha256 "29460d2f701e6c565f3212cae26f659bc9bd96e9ac6a6dae7b0653dbb63d7cbb"
+      url "https://github.com/glassa-work/homebrew-stax/releases/download/v2.6.0/stax-darwin-amd64.tar.gz"
+      sha256 "216237923c1493f9b10bbaf4dadef0e9716d156ff3590b14fb506a5ca7056e90"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/glassa-work/homebrew-stax/releases/download/v0.1.0/stax-linux-arm64.tar.gz"
-      sha256 "39001f9283738d2b0396537cf193380344ab946528567ee7af85d40cd4bf7cf9"
+      url "https://github.com/glassa-work/homebrew-stax/releases/download/v2.6.0/stax-linux-arm64.tar.gz"
+      sha256 "6c84302f248d9d087025a0deaf69e15d196ff7237393231d9b8439a20d16f869"
     end
     on_intel do
-      url "https://github.com/glassa-work/homebrew-stax/releases/download/v0.1.0/stax-linux-amd64.tar.gz"
-      sha256 "f4dfd7a26e5f67e6bdabb4114a8f74f63f188dfaa8aebfc2f12abc7b04a6665a"
+      url "https://github.com/glassa-work/homebrew-stax/releases/download/v2.6.0/stax-linux-amd64.tar.gz"
+      sha256 "d1f58c8d14c8fbfd5c02a5839d840288e2ab55e20aa6f098ec22ab0d74dea39b"
     end
   end
 
