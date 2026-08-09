@@ -1,23 +1,25 @@
 # Stax desktop viewer — macOS.
 #
-# PLACEHOLDER until the first notarized .dmg is published by the Tauri release
-# workflow (needs Apple Developer signing secrets). On release, CI updates
-# version/sha256/url here. The `binary` stanza puts the app-bundled `stax` CLI on
-# PATH when installed via `brew install --cask stax`.
+# version/sha256 are bumped by .github/workflows/stax-release.yml in the
+# (private) source repo on every v* tag. The DMG is attached to the matching
+# release on glassa-work/stax-cli. The CLI itself ships as the `stax` formula
+# in this same tap — this cask installs only Stax.app.
 cask "stax" do
-  version "0.0.0"
-  sha256 :no_check
+  version "2.7.0"
+  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
 
-  url "https://github.com/glassa-work/homebrew-stax/releases/download/desktop-v#{version}/Stax_#{version}_universal.dmg"
+  url "https://github.com/glassa-work/stax-cli/releases/download/v#{version}/Stax-v#{version}-universal.dmg"
   name "Stax"
   desc "Your codebase's knowledge brain — desktop viewer"
   homepage "https://stax.glassa.ai"
 
   app "Stax.app"
-  binary "#{appdir}/Stax.app/Contents/Resources/stax"
 
   zap trash: [
     "~/Library/Application Support/Stax",
-    "~/Library/Preferences/ai.glassa.stax.plist",
+    "~/Library/Caches/com.stax.desktop",
+    "~/Library/Preferences/com.stax.desktop.plist",
+    "~/Library/LaunchAgents/com.stax.desktop.plist",
+    "~/Library/Saved Application State/com.stax.desktop.savedState",
   ]
 end
