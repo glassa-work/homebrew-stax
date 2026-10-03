@@ -5,21 +5,21 @@
 class Stax < Formula
   desc "Your codebase's knowledge brain — project graph CLI + MCP server"
   homepage "https://stax.glassa.ai"
-  version "2.7.0"
+  version "2.7.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/glassa-work/stax-cli/releases/download/v2.7.0/stax-darwin-amd64.tar.gz"
-      sha256 "7addc85bf198fb64dee323c486dc875668535c7c650db8bc5c3b7e817d84d7a6"
+      url "https://github.com/glassa-work/stax-cli/releases/download/v2.7.1/stax-darwin-amd64.tar.gz"
+      sha256 "64aad449033bf1d454c8e1bf051bc76328ca7df899be025e66627e2492dcfdaa"
 
       define_method(:install) do
         bin.install "stax"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/glassa-work/stax-cli/releases/download/v2.7.0/stax-darwin-arm64.tar.gz"
-      sha256 "6ff87838f18885726141bb8006060ff8f87ea42077ec16c69b75bba8f00cfe3c"
+      url "https://github.com/glassa-work/stax-cli/releases/download/v2.7.1/stax-darwin-arm64.tar.gz"
+      sha256 "95e018eca4253798048e1c723674577be2b0f5cc860e844f68f91b532c97f7a0"
 
       define_method(:install) do
         bin.install "stax"
@@ -29,15 +29,15 @@ class Stax < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/glassa-work/stax-cli/releases/download/v2.7.0/stax-linux-amd64.tar.gz"
-      sha256 "971d8938216c215213d4eecc026a37794b16bd736ce2af3a850314abd93e2007"
+      url "https://github.com/glassa-work/stax-cli/releases/download/v2.7.1/stax-linux-amd64.tar.gz"
+      sha256 "969cc9b987fc8666c371f8acaa52f2de2d98102ff3c022cef94e06fc6d2e6e5b"
       define_method(:install) do
         bin.install "stax"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/glassa-work/stax-cli/releases/download/v2.7.0/stax-linux-arm64.tar.gz"
-      sha256 "845f13845155e3003c57c963528a29620db5262630ec7af5703afa86cb8d0d70"
+      url "https://github.com/glassa-work/stax-cli/releases/download/v2.7.1/stax-linux-arm64.tar.gz"
+      sha256 "3dad2f6e2ee98274a9fb468562edd684055971c134db157f165fd9e068cd5bc8"
       define_method(:install) do
         bin.install "stax"
       end
